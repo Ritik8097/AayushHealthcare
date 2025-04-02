@@ -1,0 +1,122 @@
+/* Container setup */
+
+  
+  /* Text */
+
+
+  @media screen and (min-width: 768px) {
+    .text {
+        font-size: 4rem;
+         font-weight: normal;
+         color: black;
+         position: absolute;
+         z-index: 2;
+         transition: color 0.5s ease-in-out;
+       }
+       .containe {
+        position: relative;
+        height: 85vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+       padding-left:100px;
+        background-color: white;
+        overflow: hidden;
+      }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .text {
+        font-size: 2.4rem;
+         font-weight: normal;
+         color: black;
+         position: absolute;
+         z-index: 2;
+         transition: color 0.5s ease-in-out;
+         line-height: normal;
+       }
+       .containe {
+        position: relative;
+        height: 85vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+       padding-left:35px;
+        background-color: white;
+        overflow: hidden;
+      }
+  }
+  /* Overlay animation */
+  .overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: transform 1.5s ease-in-out;
+  }
+  
+  /* Apply animation when 'animate' class is added */
+  .animate .overlay {
+    transform: translateY(-100%);
+  }
+  
+  .animate .text {
+    color: white;
+  }
+  
+
+  a.stickywhatsapp {
+    position: fixed;
+    right: -89px;
+    bottom: 50%;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 10px 0px 0px 10px;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 12px 0 #0003;
+}
+
+.stickywhatsapp img {
+    display: inline-block;
+    width: 35px;
+    height: auto;
+    vertical-align: -12px;
+}
+
+
+a.stickywhatsapp:hover{
+    right: -0px;
+}
+
+
+
+a.stickyemail {
+    position: fixed;
+    right: -65px;
+    bottom: 43%;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 10px 0px 0px 10px;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 12px 0 #0003;
+}
+
+.stickyemail img {
+    display: inline-block;
+    width: 35px;
+    height: auto;
+    vertical-align: -12px;
+}
+
+
+a.stickyemail:hover{
+    right: -0px;
+}

@@ -1,0 +1,97 @@
+/* Dropdown styles */
+.navbar-dropdown {
+    position: relative;
+  }
+  
+  /* Desktop dropdown styling */
+  .navbar-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1110px; /* Adjusted width to match the image */
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Show dropdown on hover for desktop */
+  @media (min-width: 768px) {
+    .navbar-dropdown:hover .navbar-dropdown-content {
+      display: block;
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      animation: fadeIn 0.3s ease;
+    }
+  }
+  
+  /* Animation for dropdown */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  /* Dropdown item styling */
+  .navbar-dropdown-content a {
+    display: block;
+    padding: 1rem 0; /* Increased padding for more height */
+    transition: color 0.2s ease;
+  }
+  
+  .navbar-dropdown-content a:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .navbar-dropdown-content a:hover {
+    color: var(--primary-color, rgb(0, 77, 64));
+    background-color: #f4f4f4;
+  }
+  
+  /* Description text for dropdown items */
+  .dropdown-item-description {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: normal;
+    color: #6b7280;
+    margin-top: 0.25rem;
+    line-height: 1.25; /* Added line height for better readability */
+  }
+  
+  /* Mobile menu styling */
+  #mobile-menu {
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+  }
+  
+  #mobile-menu.open {
+    transform: translateX(0);
+  }
+  
+  /* Mobile dropdown styling */
+  .mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .mobile-dropdown-content.open {
+    max-height: 500px;
+  }
+  
+  /* CSR nested dropdown styling */
+  .csr-dropdown {
+    padding-left: 1rem;
+  }
+  
+  

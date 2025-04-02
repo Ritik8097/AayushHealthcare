@@ -1,0 +1,31 @@
+.animated-text {
+   
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .animated-text span {
+    opacity: 0;
+    transform: translateY(-10px);
+    display: inline-block;
+    text-align: center;
+  }
+  
+  /* Animate each letter randomly */
+  .letter-animate {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
