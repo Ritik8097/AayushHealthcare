@@ -12,7 +12,7 @@ function EarningPotentialSection() {
             <img
               src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/WhatsApp_Image_2025-03-29_at_11.47.08_AM.jpg?v=1743599028"
               alt="Franchisee Earning Potential Table"
-              className="w-full h-auto object-contain border border-gray-300 rounded-md shadow-md"
+              className="w-full h-auto object-contain border border-gray-300 rounded-md shadow-md !pt-0"
               loading="eager"
             />
           </div>
@@ -27,7 +27,7 @@ function EarningPotentialSection() {
             <img
               src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/WhatsApp_Image_2025-03-29_at_11.46.11_AM.jpg?v=1743599032"
               alt="Doctor's Earning Potential Table"
-              className="w-full h-auto object-contain border border-gray-300 rounded-md shadow-md"
+              className="w-full h-auto object-contain border border-gray-300 rounded-md shadow-md !pt-0"
               loading="eager"
             />
           </div>
