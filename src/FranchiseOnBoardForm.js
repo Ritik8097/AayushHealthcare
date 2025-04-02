@@ -196,7 +196,7 @@ const FranchiseOnBoardForm = () => {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 60000) // 60 second timeout
 
-      const response = await fetch("https://formbackend-n4tm.onrender.com/api/doctors/download", {
+      const response = await fetch("https://formbackend-n4tm.onrender.com/api/franchise/download", {
         signal: controller.signal,
       })
 
