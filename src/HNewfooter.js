@@ -35,7 +35,7 @@ const HNewFooter = () => {
   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',  // Optional: Box shadow for outer container
   
 }}>
-      <div className='main-container h-fit md:h-[500px] flex flex-col justify-between'style={{
+      {/* <div className='main-container h-fit md:h-[500px] flex flex-col justify-between'style={{
     backgroundColor: '#c82127',  // Green background
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',  // Box shadow
     padding: '20px',  // Adjust padding as needed
@@ -107,7 +107,7 @@ const HNewFooter = () => {
                    
                 </div>
                 <FooterCopyright/>
-                </div>
+                </div> */}
   <div className="Footer_brandMark__8eNWC snipcss0-1-1-109">
   <img
     src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/png_footer_aw_1.png?v=1739967055"

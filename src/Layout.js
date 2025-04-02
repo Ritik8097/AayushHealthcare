@@ -7,6 +7,7 @@ import Blog from './Blog'
 import Service from './Service'
 import Testimonal from './Testimonal'
 import HNewFooter from './HNewfooter'
+import EarningPotentialSection from './Earningpotential'
 
 
 
@@ -22,7 +23,7 @@ function Layout() {
     <Service/>
      <Blog />
     <Testimonal />
-    
+    <EarningPotentialSection />
     <HNewFooter />
     </>
   );
