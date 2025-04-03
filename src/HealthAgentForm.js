@@ -22,21 +22,15 @@ const FranchiseOnBoardForm = () => {
     city: "",
     state: "",
     postalCode: "",
-    registrationNumber: "",
-    registrationCouncil: "",
-    registrationYear: "",
+    occupation: "",
+    workexp: "",
+    Organizations: "",
     qualification: "",
     yearOfCompletion: "",
     collegeInstitute: "",
-    yearsOfExperience: "",
-    specialty: "",
-    locality: "",
+    yearsOfExperience: "",    
     additionalNotes: "",
-    establishment: "",
-    city1: "",
-    state1: "",
-    panCard: null,
-    certificates: [],
+    
   })
 
   const location = useLocation()
@@ -123,7 +117,7 @@ const FranchiseOnBoardForm = () => {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 60000) // 60 second timeout
 
-      const response = await fetch("https://formbackend-n4tm.onrender.com/api/doctors/add", {
+      const response = await fetch("http://localhost:5000/api/healthagent/add", {
         method: "POST",
         body: formData,
      
@@ -143,21 +137,14 @@ const FranchiseOnBoardForm = () => {
           city: "",
           state: "",
           postalCode: "",
-          registrationNumber: "",
-          registrationCouncil: "",
-          registrationYear: "",
+          occupation: "",
+          workexp: "",
+          Organizations: "",
           qualification: "",
           yearOfCompletion: "",
           collegeInstitute: "",
-          yearsOfExperience: "",
-          specialty: "",
-          locality: "",
-          additionalNotes: "",
-          establishment: "",
-          city1: "",
-          state1: "",
-          panCard: null,
-          certificates: [],
+          yearsOfExperience: "",          
+          additionalNotes: "",                
         })
 
         // Reset file input fields
@@ -169,7 +156,7 @@ const FranchiseOnBoardForm = () => {
         }
       } else {
         const errorData = await response.json().catch(() => ({}))
-        toast.error(errorData.message || "Error adding doctor. Please try again.")
+        toast.error(errorData.message || "Error adding Please try again.")
       }
     } catch (error) {
       console.error("Error submitting form:", error)
@@ -193,7 +180,7 @@ const FranchiseOnBoardForm = () => {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 60000) // 60 second timeout
 
-      const response = await fetch("https://formbackend-n4tm.onrender.com/api/doctors/download", {
+      const response = await fetch("https://formbackend-n4tm.onrender.com/api/healthagent/download", {
         signal: controller.signal,
       })
 
@@ -424,9 +411,9 @@ const FranchiseOnBoardForm = () => {
               </label>
               <input
                 type="text"
-                name="registrationNumber"
-                placeholder="Registration Number"
-                value={doctorData.registrationNumber}
+                name="occupation"
+                placeholder="Enter your occupation"
+                value={doctorData.occupation}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -438,9 +425,9 @@ const FranchiseOnBoardForm = () => {
               </label>
               <input
                 type="text"
-                name="registrationCouncil"
-                placeholder="Registration Council"
-                value={doctorData.registrationCouncil}
+                name="workexp"
+                placeholder="mention here"
+                value={doctorData.workexp}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -452,9 +439,9 @@ const FranchiseOnBoardForm = () => {
               </label>
               <input
                 type="text"
-                name="registrationYear"
-                placeholder="Registration Year"
-                value={doctorData.registrationYear}
+                name="Organizations"
+                placeholder="organization"
+                value={doctorData.Organizations}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"

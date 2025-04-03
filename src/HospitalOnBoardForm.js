@@ -18,25 +18,19 @@ const FranchiseOnBoardForm = () => {
     lastName: "",
     email: "",
     phone: "",
-    address: "",
-    city: "",
-    state: "",
+    designation: "",
+    hospitalname: "",
+    hospitaltype: "",
     postalCode: "",
     registrationNumber: "",
-    registrationCouncil: "",
-    registrationYear: "",
-    qualification: "",
+    Accreditation: "",
+    EstablishedYear: "",
+    hospitaladd: "",
     yearOfCompletion: "",
     collegeInstitute: "",
     yearsOfExperience: "",
-    specialty: "",
-    locality: "",
     additionalNotes: "",
-    establishment: "",
-    city1: "",
-    state1: "",
-    panCard: null,
-    certificates: [],
+    
   })
 
   const location = useLocation()
@@ -139,15 +133,15 @@ const FranchiseOnBoardForm = () => {
           lastName: "",
           email: "",
           phone: "",
-          address: "",
-          city: "",
-          state: "",
+          designation: "",
+          hospitalname: "",
+          hospitaltype: "",
           postalCode: "",
           registrationNumber: "",
-          registrationCouncil: "",
-          registrationYear: "",
-          qualification: "",
-          yearOfCompletion: "",
+          Accreditation: "",
+          EstablishedYear: "",
+          hospitaladd: "",
+          country: "",
           collegeInstitute: "",
           yearsOfExperience: "",
           specialty: "",
@@ -275,7 +269,7 @@ const FranchiseOnBoardForm = () => {
             <div className="w-full border-t border-gray-300"></div>
           </div>
           <div className="relative flex justify-center text-sm">
-            <span className="px-2 text-xl bg-white text-red text-bold text-gray-900">Personal Information</span>
+            <span className="px-2 text-xl bg-white text-red text-bold text-gray-900">Contact Personal Information</span>
           </div>
         </div>
 
@@ -347,13 +341,13 @@ const FranchiseOnBoardForm = () => {
           {/* Address */}
           <div>
             <label className="block text-bold font-medium text-gray-700 mb-1">
-              Address <span className="text-red-500">*</span>
+              Designation <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
-              name="address"
-              placeholder="Street Address"
-              value={doctorData.address}
+              name="designation"
+              placeholder="Designation"
+              value={doctorData.designation}
               onChange={handleChange}
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -362,7 +356,7 @@ const FranchiseOnBoardForm = () => {
 
           {/* City, State, Postal Code */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
+            {/* <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
                 City <span className="text-red-500">*</span>
               </label>
@@ -375,8 +369,8 @@ const FranchiseOnBoardForm = () => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
               />
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
                 State <span className="text-red-500">*</span>
               </label>
@@ -389,8 +383,8 @@ const FranchiseOnBoardForm = () => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
               />
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
                 Postal/ zip Code <span className="text-red-500">*</span>
               </label>
@@ -403,7 +397,7 @@ const FranchiseOnBoardForm = () => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Divider for Professional Information */}
@@ -412,12 +406,40 @@ const FranchiseOnBoardForm = () => {
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 text-xl bg-white text-red text-bold text-gray-900">Medical Registration </span>
+              <span className="px-2 text-xl bg-white text-red text-bold text-gray-900">Hospital Details </span>
             </div>
           </div>
 
           {/* Registration Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+              <label className="block text-bold font-medium text-gray-700 mb-1">
+               Hospital Name<span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                name="hospitalname"
+                placeholder="Hospital Name"
+                value={doctorData.hospitalname}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+              />
+            </div>
+            <div>
+              <label className="block text-bold font-medium text-gray-700 mb-1">
+               Hospital Type<span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                name="hospitaltype"
+                placeholder="Private / Government / Trust / Multi-Specialty"
+                value={doctorData.hospitaltype}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+              />
+            </div>
             <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
                 Registration Number <span className="text-red-500">*</span>
@@ -434,13 +456,13 @@ const FranchiseOnBoardForm = () => {
             </div>
             <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
-                Registration Council <span className="text-red-500">*</span>
+              Accreditation <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
-                name="registrationCouncil"
-                placeholder="Registration Council"
-                value={doctorData.registrationCouncil}
+                name="Accreditation"
+                placeholder="NABH / NABL / JCI / Other"
+                value={doctorData.Accreditation}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -448,13 +470,43 @@ const FranchiseOnBoardForm = () => {
             </div>
             <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
-                Registration Year <span className="text-red-500">*</span>
+              Established Year <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
-                name="registrationYear"
-                placeholder="Registration Year"
-                value={doctorData.registrationYear}
+                name="EstablishedYear"
+                placeholder="Established Year"
+                value={doctorData.EstablishedYear}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-bold font-medium text-gray-700 mb-1">
+              Hospital Address  <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                name="hospitaladd"
+                placeholder="Hospital address"
+                value={doctorData.hospitaladd}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-bold font-medium text-gray-700 mb-1">
+              country  <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                name="country"
+                placeholder="country"
+                value={doctorData.country}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -462,20 +514,20 @@ const FranchiseOnBoardForm = () => {
             </div>
           </div>
 
-          <div className="relative my-6">
+          {/* <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="relative flex justify-center text-sm">
               <span className="px-2 text-xl bg-white text-red text-bold text-gray-900">Education Details</span>
             </div>
-          </div>
+          </div> */}
 
           {/* Education */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
+            {/* <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
-                Qualification <span className="text-red-500">*</span>
+              Specialties Available <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -486,8 +538,8 @@ const FranchiseOnBoardForm = () => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
               />
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
                 Year of Completion <span className="text-red-500">*</span>
               </label>
@@ -500,8 +552,8 @@ const FranchiseOnBoardForm = () => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
               />
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
                 College/Institute <span className="text-red-500">*</span>
               </label>
@@ -514,11 +566,11 @@ const FranchiseOnBoardForm = () => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Professional Details */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
                 Years of Experience <span className="text-red-500">*</span>
@@ -547,9 +599,9 @@ const FranchiseOnBoardForm = () => {
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
               />
             </div>
-          </div>
+          </div> */}
 
-          <div className="relative my-6">
+          {/* <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-gray-300"></div>
             </div>
@@ -558,10 +610,10 @@ const FranchiseOnBoardForm = () => {
                 Establishment Basic Details
               </span>
             </div>
-          </div>
+          </div> */}
 
           {/* Establishment Radio Buttons */}
-          <div>
+          {/* <div>
             <label className="block font-medium text-gray-700 mb-2">
               Establishment: <span className="text-red-500">*</span>
             </label>
@@ -591,10 +643,10 @@ const FranchiseOnBoardForm = () => {
                 />
                 <span className="ml-2">I visit an establishment</span>
               </label>
-            </div>
+            </div> */}
 
             {/* City and State Fields */}
-            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block font-medium text-gray-700 mb-1">
                   City <span className="text-red-500">*</span>
@@ -625,7 +677,7 @@ const FranchiseOnBoardForm = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Additional Notes */}
           <div className="mt-4">
