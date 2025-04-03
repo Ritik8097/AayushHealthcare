@@ -46,6 +46,8 @@ const Banner = () => {
     { type: "video", src: "https://cdn.shopify.com/videos/c/o/v/403fc210eec54d41b620a0cabe78c9f9.mp4" },
   ];
 
+ 
+
   const content = isMobile ? mobileContent : desktopContent;
 
   useEffect(() => {

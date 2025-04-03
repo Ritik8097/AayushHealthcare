@@ -22,21 +22,15 @@ const FranchiseOnBoardForm = () => {
     city: "",
     state: "",
     postalCode: "",
-    registrationNumber: "",
-    registrationCouncil: "",
-    registrationYear: "",
-    qualification: "",
-    yearOfCompletion: "",
-    collegeInstitute: "",
-    yearsOfExperience: "",
-    specialty: "",
-    locality: "",
+    pathologyname: "",
+    yearinoperation: "",
+    website: "",
+    ownername: "",
+    designation: "",
+    phoneno: "",
+    emailid: "",    
     additionalNotes: "",
-    establishment: "",
-    city1: "",
-    state1: "",
-    panCard: null,
-    certificates: [],
+   
   })
 
   const location = useLocation()
@@ -123,7 +117,7 @@ const FranchiseOnBoardForm = () => {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 60000) // 60 second timeout
 
-      const response = await fetch("https://formbackend-n4tm.onrender.com/api/doctors/add", {
+      const response = await fetch("http://localhost:5000/api/pathology/add", {
         method: "POST",
         body: formData,
      
@@ -143,21 +137,15 @@ const FranchiseOnBoardForm = () => {
           city: "",
           state: "",
           postalCode: "",
-          registrationNumber: "",
-          registrationCouncil: "",
-          registrationYear: "",
-          qualification: "",
-          yearOfCompletion: "",
-          collegeInstitute: "",
-          yearsOfExperience: "",
-          specialty: "",
-          locality: "",
+          pathologyname: "",
+          yearinoperation: "",
+          website: "",
+          ownername: "",
+          designation: "",
+          phoneno: "",
+          emailid: "",        
           additionalNotes: "",
-          establishment: "",
-          city1: "",
-          state1: "",
-          panCard: null,
-          certificates: [],
+         
         })
 
         // Reset file input fields
@@ -193,7 +181,7 @@ const FranchiseOnBoardForm = () => {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 60000) // 60 second timeout
 
-      const response = await fetch("https://formbackend-n4tm.onrender.com/api/doctors/download", {
+      const response = await fetch("https://formbackend-n4tm.onrender.com/api/pathology/download", {
         signal: controller.signal,
       })
 
@@ -411,9 +399,9 @@ const FranchiseOnBoardForm = () => {
               </label>
               <input
                 type="text"
-                name="registrationNumber"
-                placeholder="Registration Number"
-                value={doctorData.registrationNumber}
+                name="pathologyname"
+                placeholder="Pathology Name"
+                value={doctorData.pathologyname}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -425,9 +413,9 @@ const FranchiseOnBoardForm = () => {
               </label>
               <input
                 type="text"
-                name="registrationCouncil"
-                placeholder="Registration Council"
-                value={doctorData.registrationCouncil}
+                name="yearinoperation"
+                placeholder="year in operation"
+                value={doctorData.yearinoperation}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -439,9 +427,9 @@ const FranchiseOnBoardForm = () => {
               </label>
               <input
                 type="text"
-                name="registrationYear"
-                placeholder="Registration Year"
-                value={doctorData.registrationYear}
+                name="website"
+                placeholder="website"
+                value={doctorData.website}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -455,7 +443,7 @@ const FranchiseOnBoardForm = () => {
             <input
               type="text"
               name="address"
-              placeholder="Street Address"
+              placeholder="Enter Address"
               value={doctorData.address}
               onChange={handleChange}
               required
@@ -481,9 +469,9 @@ const FranchiseOnBoardForm = () => {
               </label>
               <input
                 type="text"
-                name="qualification"
-                placeholder="Qualification"
-                value={doctorData.qualification}
+                name="ownername"
+                placeholder="Enter Name"
+                value={doctorData.ownername}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -495,9 +483,9 @@ const FranchiseOnBoardForm = () => {
               </label>
               <input
                 type="text"
-                name="yearOfCompletion"
-                placeholder="Year of Completion"
-                value={doctorData.yearOfCompletion}
+                name="designation"
+                placeholder="Designation"
+                value={doctorData.designation}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -509,9 +497,9 @@ const FranchiseOnBoardForm = () => {
               </label>
               <input
                 type="text"
-                name="collegeInstitute"
-                placeholder="College/Institute"
-                value={doctorData.collegeInstitute}
+                name="phoneno"
+                placeholder="Phone number"
+                value={doctorData.phoneno}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -527,9 +515,9 @@ const FranchiseOnBoardForm = () => {
               </label>
               <input
                 type="text"
-                name="yearsOfExperience"
-                placeholder="Years of Experience"
-                value={doctorData.yearsOfExperience}
+                name="emailid"
+                placeholder="Email ID"
+                value={doctorData.emailid}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
@@ -538,7 +526,7 @@ const FranchiseOnBoardForm = () => {
            
           </div>
 
-          <div className="relative my-6">
+          {/* <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-gray-300"></div>
             </div>
@@ -547,7 +535,7 @@ const FranchiseOnBoardForm = () => {
                 Establishment Basic Details
               </span>
             </div>
-          </div>
+          </div> */}
 
           {/* Establishment Radio Buttons */}
           {/* <div>
