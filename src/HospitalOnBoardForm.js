@@ -21,14 +21,11 @@ const FranchiseOnBoardForm = () => {
     designation: "",
     hospitalname: "",
     hospitaltype: "",
-    postalCode: "",
     registrationNumber: "",
     Accreditation: "",
     EstablishedYear: "",
     hospitaladd: "",
-    yearOfCompletion: "",
-    collegeInstitute: "",
-    yearsOfExperience: "",
+    country: "",
     additionalNotes: "",
     
   })
@@ -117,7 +114,7 @@ const FranchiseOnBoardForm = () => {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 60000) // 60 second timeout
 
-      const response = await fetch("https://formbackend-n4tm.onrender.com/api/doctors/add", {
+      const response = await fetch("https://formbackend-n4tm.onrender.com/api/hospital/add", {
         method: "POST",
         body: formData,
      
@@ -135,23 +132,14 @@ const FranchiseOnBoardForm = () => {
           phone: "",
           designation: "",
           hospitalname: "",
-          hospitaltype: "",
-          postalCode: "",
+          hospitaltype: "",          
           registrationNumber: "",
           Accreditation: "",
           EstablishedYear: "",
           hospitaladd: "",
-          country: "",
-          collegeInstitute: "",
-          yearsOfExperience: "",
-          specialty: "",
-          locality: "",
+          country: "",          
           additionalNotes: "",
-          establishment: "",
-          city1: "",
-          state1: "",
-          panCard: null,
-          certificates: [],
+          
         })
 
         // Reset file input fields
@@ -442,7 +430,7 @@ const FranchiseOnBoardForm = () => {
             </div>
             <div>
               <label className="block text-bold font-medium text-gray-700 mb-1">
-                Registration Number <span className="text-red-500">*</span>
+                Hospital Registration Number <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
