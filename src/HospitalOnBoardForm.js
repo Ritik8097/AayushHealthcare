@@ -247,9 +247,9 @@ const FranchiseOnBoardForm = () => {
 
         {/* Notes */}
         <p className="text-center text-gray-600 mb-1">
-          Please fill out all the required information to complete your onboarding process.
+        Enhance your hospital’s reach and reputation by partnering with a leading health platform.
         </p>
-        <p className="text-center text-gray-600 mb-6">All documents uploaded must be clear and legible.</p>
+        <p className="text-center text-gray-600 mb-6">Together, let’s create a seamless and impactful healthcare experience for every patient.</p>
 
         {/* Divider */}
         <div className="relative my-6">

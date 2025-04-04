@@ -268,9 +268,9 @@ const FranchiseOnBoardForm = () => {
 
           {/* Notes */}
           <p className="text-center text-gray-600 mb-1">
-            Please fill out all the required information to Work with us.
+          Join hands with us to revolutionize healthcare access in your region and build a rewarding business.
           </p>
-          <p className="text-center text-gray-600 mb-6">Get a chance to Earn</p>
+          <p className="text-center text-gray-600 mb-6">Start your healthcare journey with us</p>
 
           {/* Divider */}
           <div className="relative my-6">

@@ -253,9 +253,9 @@ const FranchiseOnBoardForm = () => {
 
         {/* Notes */}
         <p className="text-center text-gray-600 mb-1">
-          Please fill out all the required information to complete your onboarding process.
+        Collaborate with a leading healthcare brand and grow your pathology services with confidence.
         </p>
-        <p className="text-center text-gray-600 mb-6">All documents uploaded must be clear and legible.</p>
+        <p className="text-center text-gray-600 mb-6">A partnership built on quality, compliance, and care</p>
 
         {/* Divider */}
         <div className="relative my-6">

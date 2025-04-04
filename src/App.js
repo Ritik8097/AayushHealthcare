@@ -98,6 +98,8 @@ const AnimatedRoutes = () => {
         <Route path="Pathology" element={<PageTransition><PathologyOnBoardForm /></PageTransition>} />
         <Route path="Agent" element={<PageTransition><HealthAgentForm/></PageTransition>} />
         <Route path="Hospital" element={<PageTransition><HospitalOnBoardForm/></PageTransition>} />
+
+        
         
       </Routes>
     </AnimatePresence>
