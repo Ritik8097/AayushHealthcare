@@ -153,7 +153,7 @@ function EarningPotentialSection() {
                 </p>
                 <Link href="/consultation" className="inline-block">
                   <button className="bg-[#233f8f] hover:bg-[#233f8f] text-white px-6 py-3 text-lg rounded-md mt-4">
-                    Join Our healthcare
+                    Join Our Healthcare
                   </button>
                 </Link>
               </div>

@@ -234,8 +234,8 @@ const FranchiseOnBoardForm = () => {
   return (
     <>
    <Header />
-    <div className="bg-white rounded-xl shadow-md overflow-hidden pt-16 flex justify-center">
-      <div className="p-8 max-w-[1400px]">
+   <div className="bg-white rounded-xl shadow-md overflow-hidden pt-16 flex justify-center">
+   <div className="p-8 max-w-[1400px]">
         {/* Company Logo */}
         <div className="flex justify-center mb-6">
           <img
@@ -793,3 +793,7 @@ const FranchiseOnBoardForm = () => {
 }
 
 export default FranchiseOnBoardForm;
+
+
+
+
