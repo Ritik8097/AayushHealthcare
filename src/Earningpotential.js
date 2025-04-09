@@ -47,7 +47,7 @@ function EarningPotentialSection() {
               <TrendingUp className="w-4 h-4 mr-2" />
               Financial Opportunity
             </div>
-            <h2 className="text-[40px] md:text-4xl lg:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-amber-600 !text-[#df3636]">
+            <h2 className="!text-[60px]  md:text-4xl lg:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-amber-600 !text-[#df3636]">
               Discover Your Earning Potential
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
