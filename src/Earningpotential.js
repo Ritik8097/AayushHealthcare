@@ -81,7 +81,7 @@ function EarningPotentialSection() {
           <FadeInSection delay={0.4} className="h-full">
             <div className="h-full flex items-center">
               <img
-                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Franchise_earning_potential_1.png?v=1744205411"
+                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Franchise_earning_potential_2.png?v=1744205900"
                 alt="Franchisee Earning Potential Table"
                 className="w-full rounded-md shadow-lg object-contain max-h-[500px]"
                 loading="eager"
