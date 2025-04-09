@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
 import { ArrowRight, IndianRupee, TrendingUp } from "lucide-react"
-import { Link } from "react-router-dom";
-
+import { Link } from "react-router-dom"
 
 const FadeInSection = ({ children, delay = 0 }) => {
   const controls = useAnimation()
@@ -58,7 +57,7 @@ function EarningPotentialSection() {
         </FadeInSection>
 
         {/* Franchisee Section */}
-        <div className="grid md:grid-cols-2 gap-12  items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           <FadeInSection delay={0.2}>
             <div className="space-y-6">
               <div className="inline-flex items-center justify-center mb-2 bg-blue-100 text-[#233f8f] px-4 py-1 rounded-full text-sm font-medium">
@@ -79,47 +78,33 @@ function EarningPotentialSection() {
             </div>
           </FadeInSection>
 
-          <FadeInSection delay={0.4}>
-          
-              <motion.div
-                className="relative w-full h-full"
-                whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/WhatsApp_Image_2025-03-29_at_11.47.08_AM.jpg?v=1743599028"
-                  alt="Franchisee Earning Potential Table"
-                  className="w-full h-full object-cover rounded-md"
-                  loading="eager"
-                />
-                <div className="absolute inset-0  from-black/20 to-transparent rounded-md"></div>
-              </motion.div>
-            
+          <FadeInSection delay={0.4} className="h-full">
+            <div className="h-full flex items-center">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Franchise_earning_potential.png?v=1744202385"
+                alt="Franchisee Earning Potential Table"
+                className="w-full rounded-md shadow-lg object-contain max-h-[500px]"
+                loading="eager"
+              />
+            </div>
           </FadeInSection>
         </div>
 
         {/* Doctor's Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center md:mt-24">
-          <FadeInSection delay={0.6}>
-            
-              <motion.div
-                className="relative w-full h-full"
-                whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/WhatsApp_Image_2025-03-29_at_11.46.11_AM.jpg?v=1743599032"
-                  alt="Doctor's Earning Potential Table"
-                  className="w-full h-full object-cover rounded-md"
-                  loading="eager"
-                />
-                <div className="absolute inset-0  from-black/20 to-transparent rounded-md"></div>
-              </motion.div>
-         
+        <div className="grid md:grid-cols-2 gap-8 items-center mt-16 md:mt-20">
+          <FadeInSection delay={0.6} className="h-full order-2 md:order-1">
+            <div className="h-full flex items-center">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Doctor_earning_potential.png?v=1744203951"
+                alt="Doctor's Earning Potential Table"
+                className="w-full rounded-md shadow-lg object-contain max-h-[500px]"
+                loading="eager"
+              />
+            </div>
           </FadeInSection>
 
-          <FadeInSection delay={0.8}>
-            <div className="space-y-6 md:order-1">
+          <FadeInSection delay={0.8} className="order-1 md:order-2">
+            <div className="space-y-6">
               <div className="inline-flex items-center justify-center mb-2 bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium">
                 <IndianRupee className="w-4 h-4 mr-2" />
                 Doctor Benefits
@@ -129,7 +114,7 @@ function EarningPotentialSection() {
                 Physicians in our network enjoy competitive compensation, flexible schedules, and the opportunity to
                 focus on patient care without administrative burdens.
               </p>
-              <Link  to="/Doctor" className="inline-block">
+              <Link to="/Doctor" className="inline-block">
                 <button className="group bg-blue-500 hover:bg-blue-300 text-white px-5 py-2 rounded-md flex items-center transition-all">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -151,7 +136,7 @@ function EarningPotentialSection() {
                   Contact our team today to learn more about the financial opportunities available and how you can get
                   started.
                 </p>
-                <Link href="/consultation" className="inline-block">
+                <Link to="/consultation" className="inline-block">
                   <button className="bg-[#233f8f] hover:bg-[#233f8f] text-white px-6 py-3 text-lg rounded-md mt-4">
                     Join Our Healthcare
                   </button>
@@ -165,4 +150,4 @@ function EarningPotentialSection() {
   )
 }
 
-export default EarningPotentialSection;
+export default EarningPotentialSection
