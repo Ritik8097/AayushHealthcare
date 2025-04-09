@@ -81,7 +81,7 @@ function EarningPotentialSection() {
           <FadeInSection delay={0.4} className="h-full">
             <div className="h-full flex items-center">
               <img
-                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Franchise_earning_potential.png?v=1744202385"
+                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Franchise_earning_potential_1.png?v=1744205411"
                 alt="Franchisee Earning Potential Table"
                 className="w-full rounded-md shadow-lg object-contain max-h-[500px]"
                 loading="eager"
@@ -95,7 +95,7 @@ function EarningPotentialSection() {
           <FadeInSection delay={0.6} className="h-full order-2 md:order-1">
             <div className="h-full flex items-center">
               <img
-                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Doctor_earning_potential.png?v=1744203951"
+                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Doctor_earning_potential_1.png?v=1744205410"
                 alt="Doctor's Earning Potential Table"
                 className="w-full rounded-md shadow-lg object-contain max-h-[500px]"
                 loading="eager"
