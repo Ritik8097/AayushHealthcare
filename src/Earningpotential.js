@@ -136,7 +136,7 @@ function EarningPotentialSection() {
                   Contact our team today to learn more about the financial opportunities available and how you can get
                   started.
                 </p>
-                <Link to="/consultation" className="inline-block">
+                <Link to="#" className="inline-block">
                   <button className="bg-[#233f8f] hover:bg-[#233f8f] text-white px-6 py-3 text-lg rounded-md mt-4">
                     Join Our Healthcare
                   </button>
