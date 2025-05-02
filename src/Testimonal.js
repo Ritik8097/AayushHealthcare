@@ -5,6 +5,30 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import './Testimonal.css';
+import { Helmet } from "react-helmet"
+
+
+
+<Helmet>
+  <title> Healthcare Testimonal</title>
+  <meta name="description" content="Join Aayush Healthcare as a healthcare franchise partner. Fill out the onboarding form to become a part of our medical network." />
+  <meta name="keywords" content="view medical records online,patient health portal,hospital appointment booking,virtual health consultation,health checkup packages,Heatlhcare Sevices, Health,Pathology,franchise,Earning Potential, hospital onboarding, health franchise, join hospital network, healthcare partner,Aayush Healthcare, doctor,Franchise,Nurse,Consultation,Online Consultation,affordable treatment" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.aayushhealth.com/" />
+
+  {/* Open Graph for Facebook */}
+  <meta property="og:title" content="Pathology Onboarding | Healthcare" />
+  <meta property="og:description" content="Become a Healthcare franchise partner. Submit your hospital and doctor details easily." />
+  <meta property="og:url" content="https://www.aayushhealth.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.aayushhealth.com/" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Franchise Onboarding | Healthcare" />
+  <meta name="twitter:description" content="franchise, hospital onboarding, health franchise, join hospital network, healthcare partner,Aayush Healthcare, doctor,Franchise,Nurse,Consultation,Online Consultation,affordable treatment" />
+  <meta name="twitter:image" content="https://www.aayushhealth.com/" />
+</Helmet>
 
 
 const testimonials = [
